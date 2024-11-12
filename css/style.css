@@ -16,6 +16,8 @@ body {
     justify-content: center;
     min-height: 100vh;
     z-index: -1;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .navbar {
