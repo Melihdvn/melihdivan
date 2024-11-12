@@ -17,13 +17,23 @@
         </ul>
     </nav>
 
-    <section id="about">
-        <h2>Hakkımda</h2>
-        <p>Ben Melih Divan, 3. sınıf bilgisayar mühendisliği öğrencisiyim. Teknolojiye olan ilgim ve problem çözme tutkum bu alanda gelişmeme yardımcı oldu.</p>
-        <button id="more-info-btn">Daha Fazla Gör</button>
-        <div id="more-info" style="display: none;">
-            <p>Yazılım geliştirme, veri yapıları ve algoritmalar konusunda bilgi ve tecrübe edinmeyi hedefliyorum.</p>
+    <div class="about-container">
+        <div class="about-header">
+            <h2>Hakkımda</h2>
         </div>
-    </section>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Ben Melih Divan, bilgisayar ve yazılım geliştirme konusunda tutkulu bir bilgisayar mühendisliği öğrencisiyim. Erken yaşta keşfetmeye başladım ve şimdi çeşitli projelerle sektöre adım atıyorum.</p>
+                <div id="more-info" style="display: none;">
+                    <p>Öğrenmeye, büyümeye ve yenilikçi projelere katkı sağlamaya hevesliyim. Yazılım geliştirme, veri yapıları ve algoritmalar konusunda bilgi ve tecrübe edinmeyi hedefliyorum.</p>
+                </div>
+                <button id="more-info-btn" class="more-info-btn" onclick="toggleMoreInfo()">Daha Fazla Gör</button>
+            </div>
+            <div>
+                <img class="about-photo" src="img/about.jpg">
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>

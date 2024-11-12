@@ -13,3 +13,8 @@ function updateTime() {
 }
 
 setInterval(updateTime, 1000);
+
+function toggleMoreInfo() {
+  const moreInfo = document.getElementById("more-info");
+  moreInfo.style.display = moreInfo.style.display === "none" ? "block" : "none";
+}
