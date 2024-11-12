@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 body {
     background-image: url('../img/background.jpg');
     background-size: cover;
@@ -25,12 +26,15 @@ body {
     top: 0;
     display: flex;
     justify-content: center;
+    z-index: 10;
 }
+
 .navbar ul {
     list-style: none;
     display: flex;
     gap: 1rem;
 }
+
 .navbar a {
     color: #bebebe;
     text-decoration: none;
@@ -39,6 +43,7 @@ body {
     border-radius: 15px;
     padding: 15px;
 }
+
 .navbar a:hover {
     background-color: #4449;
     color: #5f5f5f;
@@ -58,6 +63,7 @@ body {
     margin-bottom: 0.5rem;
     color: #dadada;
 }
+
 .profile-container p {
     font-size: 1.2em;
     color: #cacaca;
@@ -96,4 +102,57 @@ body {
     text-align: center;
     padding: 10px;
     border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .profile-container {
+        width: 90%;
+        padding: 20px;
+        margin-top: 150px;
+    }
+
+    .profile-container h1 {
+        font-size: 2em;
+    }
+
+    .profile-container p {
+        font-size: 1em;
+    }
+
+    .info-container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .clock-container {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .profile-container h1 {
+        font-size: 1.8em;
+    }
+
+    .profile-container p {
+        font-size: 0.9em;
+    }
 }
