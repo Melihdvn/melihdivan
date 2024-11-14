@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projelerim</title>
+    <title>Melih Divan - Projeler</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
@@ -18,22 +18,48 @@
     </nav>
 
     <section id="projects">
+        <div class = project-container>
+        <div class = project-header>
         <h2>Projelerim</h2>
+        
         <div class="project-filter">
-            <button data-filter="all">Hepsi</button>
-            <button data-filter="web">Web</button>
-            <button data-filter="mobil">Mobil</button>
+        
+            <button data-filter="all" onclick="filterProjects('all')">Hepsi</button>
+            <button data-filter="pc" onclick="filterProjects('pc')">Pc</button>
+            <button data-filter="mobil" onclick="filterProjects('mobil')">Mobil</button>
+        </div>
         </div>
         <div class="project-list">
-            <div class="project" data-category="web">
-                <h3>Web Projesi 1</h3>
-                <p>Kısa açıklama...</p>
+            <div class="project" data-category="pc" onclick="openModal('Coordinator App', 'Öğrenci çalışma grupları organize etme uygulaması.')">
+                <img src="img/project1.jpg" alt="Coordinator App">
+                <h3>Study Group Coordinator App</h3>
             </div>
-            <div class="project" data-category="mobil">
-                <h3>Mobil Proje 1</h3>
-                <p>Kısa açıklama...</p>
+            <div class="project" data-category="mobil" onclick="openModal('lthnn rentacar', 'Araba kiralama mobil uygulaması.')">
+                <img src="img/project2.jpg" alt="lthnn rentacar">
+                <h3>lthnn rentacar</h3>
+            </div>
+            <div class="project" data-category="pc" onclick="openModal('Vehicle Service and Maintenance Automation', 'Araç servisi ve bakımıyla ilgili çeşitli yönleri yönetmek için kapsamlı bir çözüm sunmakta olan servis uygulaması.')">
+                <img src="img/project3.jpg" alt="Vehicle Service and Maintenance Automation">
+                <h3>Vehicle Service and Maintenance Automation</h3>
+            </div>
+            <div class="project" data-category="pc" onclick="openModal('Librarian App', 'Kütüphane yönetimi uygulaması.')">
+                <img src="img/project4.jpg" alt="Librarian App">
+                <h3>Librarian App</h3>
             </div>
         </div>
+        </div>
     </section>
+    
+    
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <img id="modal-image" src="" alt="Project Image" style="width: 100%; margin-top: 20px; border-radius: 10px;">
+        </div>
+    </div>
+    
+    
 </body>
 </html>
