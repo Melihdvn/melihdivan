@@ -176,24 +176,27 @@ body {
     background-color: #222a;
     margin-top: 100px;
     justify-content: center;
+    align-items: center;
 }
 
 .project-header {
     background-color: #222a;
     color: #dadada;
     padding: 15px;
-    padding-left: 50px;
     border-bottom: 2px solid #dadada;
     font-size: 24px;
     font-weight: bold;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    justify-items: center;
 }
 
 .project-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     width: 100%;
-    flex-wrap: wrap;
+    justify-items: center;
 }
 
 .project {
