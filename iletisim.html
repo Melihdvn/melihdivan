@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#151515"/>
-    <title>İletişim</title>
+    <title>Melih Divan - İletişim</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
@@ -20,7 +20,7 @@
 
     <section id="contact">
         <h2>İletişim</h2>
-        <form id="contact-form">
+        <form id="contact-form" onsubmit="return validateForm()" novalidate>
             <label for="name">İsim:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">E-posta:</label>
@@ -28,6 +28,7 @@
             <label for="message">Mesaj:</label>
             <textarea id="message" name="message" required></textarea>
             <button type="submit">Gönder</button>
+            <p id="error-message" class="error"></p>
         </form>
     </section>
 </body>

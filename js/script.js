@@ -68,3 +68,24 @@ window.onclick = function (event) {
     closeModal();
   }
 };
+
+function validateForm() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const errorMessage = document.getElementById("error-message");
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!name || !email || !message) {
+    errorMessage.textContent = "Lütfen tüm alanları doldurunuz.";
+    return false;
+  } else if (!emailPattern.test(email)) {
+    errorMessage.textContent = "Geçerli bir e-posta adresi giriniz.";
+    return false;
+  }
+
+  errorMessage.textContent = "";
+  alert("Mesajınız başarıyla gönderildi!");
+  return true;
+}
